@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NEXORA DIGITAL | SEO, Google Ads, Branding and WordPress Agency</title>
+  <meta name="description" content="NEXORA DIGITAL is a fictional premium digital marketing agency demo: SEO, Google Ads, social media, branding and WordPress development for ambitious brands.">
+  <meta name="theme-color" content="#101116">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph / social. Replace the absolute URLs with your live domain. Most platforms prefer a 1200x630 PNG or JPG over SVG. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXORA DIGITAL">
+  <meta property="og:title" content="NEXORA DIGITAL | We turn digital ambition into real growth">
+  <meta property="og:description" content="Strategic marketing, immersive design and high-performance websites engineered to move ambitious brands forward.">
+  <meta property="og:image" content="assets/images/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts: Syne (display) and Manrope (body). System fallbacks keep layout stable if the CDN is blocked. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Page-load intro -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__brand">NEXORA<sup>®</sup></span>
+      <span class="loader__count"><span id="loader-count">0</span>%</span>
+    </div>
+    <span class="loader__bar"><span id="loader-bar"></span></span>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="logo" href="#home" aria-label="NEXORA, back to top">NEXORA<sup>®</sup></a>
+
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#work">Work</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#insights">Insights</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--lime btn--sm magnetic" href="#contact">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__grid"></span>
+        <span class="glow glow--a" data-speed="0.25"></span>
+        <span class="glow glow--b" data-speed="0.12"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="status" data-hero="status"><span class="status__dot" aria-hidden="true"></span>Now booking new projects</p>
+          <h1 class="hero__title" id="hero-title" data-hero-title>WE TURN DIGITAL AMBITION INTO REAL GROWTH.</h1>
+          <p class="hero__lead" data-hero="lead">Strategic marketing, immersive design, and high-performance websites engineered to move ambitious brands forward.</p>
+          <div class="hero__actions" data-hero="actions">
+            <a class="btn btn--primary magnetic" href="#contact">Let's Build Something Great</a>
+            <a class="btn btn--ghost magnetic" href="#work">Explore Our Work</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" id="hero-visual">
+          <!-- Shown when WebGL is unavailable, when the device is low-powered, or without JavaScript -->
+          <div class="hero__fallback" aria-hidden="true"><span class="fb-orb"></span><span class="fb-ring"></span><span class="fb-ring fb-ring--2"></span></div>
+          <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+          <!-- Floating dashboard panels (illustrative sample data) -->
+          <div class="panel panel--traffic" style="--d:22" data-hero="panel">
+            <div class="panel__inner glass">
+              <p class="panel__label">Organic sessions</p>
+              <p class="panel__value">24.8K <span class="panel__delta">+18%</span></p>
+              <svg class="spark" viewBox="0 0 160 48" preserveAspectRatio="none" aria-hidden="true">
+                <defs><linearGradient id="sparkfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7FF64" stop-opacity=".35"/><stop offset="1" stop-color="#D7FF64" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0 40 L20 34 L40 37 L60 24 L80 28 L100 14 L120 18 L140 7 L160 4 L160 48 L0 48Z" fill="url(#sparkfill)"/>
+                <path class="spark__line" d="M0 40 L20 34 L40 37 L60 24 L80 28 L100 14 L120 18 L140 7 L160 4" fill="none" stroke="#D7FF64" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              <p class="panel__note">Sample data</p>
+            </div>
+          </div>
+
+          <div class="panel panel--ads" style="--d:-30" data-hero="panel">
+            <div class="panel__inner glass">
+              <p class="panel__label">Campaign return</p>
+              <div class="bars" aria-hidden="true"><span style="--h:38%"></span><span style="--h:54%"></span><span style="--h:46%"></span><span style="--h:72%"></span><span style="--h:88%"></span></div>
+              <p class="panel__note">Sample data</p>
+            </div>
+          </div>
+
+          <div class="panel panel--social" style="--d:40" data-hero="panel">
+            <div class="panel__inner glass">
+              <p class="panel__label">Social reach</p>
+              <div class="ring-meter" aria-hidden="true">
+                <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" fill="none" stroke="rgba(244,245,247,.14)" stroke-width="4"/><circle class="ring-meter__fill" cx="22" cy="22" r="18" fill="none" stroke="#3657FF" stroke-width="4" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="34" transform="rotate(-90 22 22)"/></svg>
+                <span>70%</span>
+              </div>
+              <p class="panel__note">Sample data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#services" data-hero="cue">
+        <span class="scroll-cue__text">Scroll</span>
+        <span class="scroll-cue__line" aria-hidden="true"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="services-title" data-split>CREATIVE THINKING. MEASURABLE IMPACT.</h2>
+          <p class="section__intro" data-reveal>Five disciplines, one team. Pick a single service or combine them into a plan that fits your stage of growth.</p>
+        </header>
+
+        <div class="services__grid" data-stagger>
+          <article class="card tilt card--a" style="--accent: var(--cobalt)">
+            <span class="card__deco card__deco--a" aria-hidden="true"></span>
+            <svg class="icon icon--seo" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="26" cy="26" r="14"/><path d="M36.5 36.5 52 52"/><path class="bar b1" d="M20 31v-5"/><path class="bar b2" d="M26 31V21"/><path class="bar b3" d="M32 31v-7"/></svg>
+            <p class="card__num">01</p>
+            <h3 class="card__title">SEO &amp; Organic Growth</h3>
+            <p class="card__text">Technical audits, content strategy and link-earning that build search visibility you own.</p>
+            <a class="card__link" href="#contact" data-service="seo">Discuss this service <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="card tilt card--b" style="--accent: var(--lime)">
+            <span class="card__deco card__deco--b" aria-hidden="true"></span>
+            <svg class="icon icon--perf" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><circle class="pulse" cx="32" cy="32" r="13"/><circle cx="32" cy="32" r="3" fill="currentColor"/><path class="aim" d="M32 32 52 12M45 12h7v7"/></svg>
+            <p class="card__num">02</p>
+            <h3 class="card__title">Performance Marketing</h3>
+            <p class="card__text">Google Ads and paid campaigns structured around cost per result, not clicks alone.</p>
+            <a class="card__link" href="#contact" data-service="ads">Discuss this service <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="card tilt card--c" style="--accent: var(--cobalt)">
+            <span class="card__deco card__deco--c" aria-hidden="true"></span>
+            <svg class="icon icon--social" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27 28 15 19M37 28l11-7M36 37l8 11M27 37l-9 8"/><circle cx="32" cy="32" r="6"/><circle class="n n1" cx="12" cy="16" r="4"/><circle class="n n2" cx="52" cy="18" r="4"/><circle class="n n3" cx="46" cy="52" r="4"/><circle class="n n4" cx="14" cy="48" r="4"/></svg>
+            <p class="card__num">03</p>
+            <h3 class="card__title">Social Media Strategy</h3>
+            <p class="card__text">Channel plans, content systems and community playbooks that give your brand a consistent voice.</p>
+            <a class="card__link" href="#contact" data-service="social">Discuss this service <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="card tilt card--d" style="--accent: var(--lime)">
+            <span class="card__deco card__deco--d" aria-hidden="true"></span>
+            <svg class="icon icon--brand" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="13"/><rect class="sq" x="29" y="27" width="23" height="23" rx="3"/><path class="tri" d="M10 52 22 35l12 17z"/></svg>
+            <p class="card__num">04</p>
+            <h3 class="card__title">Brand Identity &amp; Creative</h3>
+            <p class="card__text">Logos, visual systems and campaign creative that make a young brand look established and sound unmistakable.</p>
+            <a class="card__link" href="#contact" data-service="brand">Discuss this service <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="card tilt card--e" style="--accent: var(--cobalt)">
+            <span class="card__deco card__deco--e" aria-hidden="true"></span>
+            <svg class="icon icon--wp" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="52" height="40" rx="5"/><path d="M6 22h52"/><circle cx="12" cy="17" r="1.3" fill="currentColor"/><circle cx="17" cy="17" r="1.3" fill="currentColor"/><path class="code l" d="M26 32l-6 5 6 5"/><path class="code r" d="M38 32l6 5-6 5"/><path d="M34 30l-4 14"/></svg>
+            <p class="card__num">05</p>
+            <h3 class="card__title">WordPress Web Development</h3>
+            <p class="card__text">Fast, custom WordPress themes your team can edit without calling a developer, built for speed, search and conversion.</p>
+            <a class="card__link" href="#contact" data-service="wordpress">Discuss this service <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="work-title" data-split>SELECTED WORK</h2>
+          <p class="section__intro" data-reveal>Three fictional concept projects that show how we approach e-commerce, SaaS and brand work. They are demonstrations, not real client results.</p>
+        </header>
+
+        <div class="work__grid">
+          <article class="project project--wide" data-project="aurora">
+            <div class="project__media tilt">
+              <div class="art art--aurora" aria-hidden="true">
+                <span class="a-orb"></span><span class="a-ring"></span><span class="a-pill a-pill--1"></span><span class="a-pill a-pill--2"></span><span class="a-label">Autumn collection</span>
+              </div>
+              <!-- To use a real image instead of CSS art, replace the .art block with:
+                   <img src="assets/images/aurora.jpg" alt="Aurora storefront" width="1600" height="1000" loading="lazy" decoding="async"> -->
+              <span class="project__tag">Premium E-commerce</span>
+            </div>
+            <div class="project__info">
+              <h3 class="project__name">AURORA</h3>
+              <p class="project__text">A concept storefront for a premium skincare label, designed around product storytelling and a fast checkout.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-open-project="aurora">View project details</button>
+            </div>
+          </article>
+
+          <article class="project" data-project="velocity">
+            <div class="project__media tilt">
+              <div class="art art--velocity" aria-hidden="true">
+                <span class="v-lines"></span>
+                <span class="v-window"><i></i><i></i><i></i><b></b></span>
+                <span class="v-chip">Free trial</span>
+              </div>
+              <span class="project__tag">SaaS Marketing</span>
+            </div>
+            <div class="project__info">
+              <h3 class="project__name">VELOCITY</h3>
+              <p class="project__text">A concept marketing site and paid funnel for a fictional analytics platform.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-open-project="velocity">View project details</button>
+            </div>
+          </article>
+
+          <article class="project project--offset" data-project="monolith">
+            <div class="project__media tilt">
+              <div class="art art--monolith" aria-hidden="true">
+                <span class="m-block"></span><span class="m-slit"></span><span class="m-shadow"></span><span class="m-dot"></span>
+              </div>
+              <span class="project__tag">Creative Brand Identity</span>
+            </div>
+            <div class="project__info">
+              <h3 class="project__name">MONOLITH</h3>
+              <p class="project__text">A concept identity system for an architecture studio: logo, type, colour and print.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-open-project="monolith">View project details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="section results" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <h2 class="results__title" id="results-title" data-reveal>The studio at a glance</h2>
+        <div class="results__grid">
+          <div class="stat">
+            <p class="stat__value"><span class="count" data-count="5" data-pad="2">05</span></p>
+            <span class="stat__line" aria-hidden="true"></span>
+            <p class="stat__label">Core services</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value"><span class="count" data-count="3" data-pad="2">03</span></p>
+            <span class="stat__line" aria-hidden="true"></span>
+            <p class="stat__label">Demo projects</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value"><span class="count" data-count="100" data-suffix="%">100%</span></p>
+            <span class="stat__line" aria-hidden="true"></span>
+            <p class="stat__label">Custom design</p>
+          </div>
+        </div>
+        <p class="results__note" data-reveal>Illustrative demo values. They describe this sample site and are not client results or business achievements.</p>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__inner">
+        <div class="about__copy">
+          <h2 class="section__title about__title" id="about-title" data-split>WE DON'T JUST MAKE THINGS LOOK BETTER. WE MAKE THEM WORK BETTER.</h2>
+          <p class="about__lead" data-reveal>NEXORA is built for founders and marketing leads who are tired of pretty work that does not move numbers. We pair strategists, designers and developers in one small team so decisions are made together, not handed over.</p>
+          <p data-reveal>Our approach is simple: learn what your customers need, design the clearest route to it, and measure what happens next. Every page, ad and post has a job.</p>
+
+          <ul class="pillars" data-stagger>
+            <li class="pillar"><h3 class="pillar__title">Strategy</h3><p>Positioning, channel choice and a plan tied to your goals.</p></li>
+            <li class="pillar"><h3 class="pillar__title">Creativity</h3><p>Distinctive visuals and words that people remember.</p></li>
+            <li class="pillar"><h3 class="pillar__title">Technology</h3><p>Fast, accessible websites and tracking you can trust.</p></li>
+          </ul>
+        </div>
+
+        <div class="about__visual" aria-hidden="true">
+          <div class="scene">
+            <div class="cube">
+              <span class="cube__face cube__face--f"></span><span class="cube__face cube__face--b"></span>
+              <span class="cube__face cube__face--l"></span><span class="cube__face cube__face--r"></span>
+              <span class="cube__face cube__face--t"></span><span class="cube__face cube__face--d"></span>
+            </div>
+            <span class="halo halo--1"></span><span class="halo halo--2"></span>
+            <span class="float float--1" data-speed="0.4"></span>
+            <span class="float float--2" data-speed="0.2"></span>
+            <span class="float float--3" data-speed="0.55"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="process-title" data-split>OUR PROCESS</h2>
+          <p class="section__intro" data-reveal>Four steps from first conversation to a launched, improving product. Select a step to see what it involves.</p>
+        </header>
+
+        <div class="steps" id="steps" style="--i:0">
+          <span class="steps__line" aria-hidden="true"><span class="steps__fill"></span></span>
+          <div class="steps__list" role="tablist" aria-label="Project process">
+            <button class="step is-active" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" type="button">
+              <span class="step__marker" aria-hidden="true">01</span>
+              <span class="step__title">Discover</span>
+              <span class="step__text">Understand the business, audience, and goals.</span>
+            </button>
+            <button class="step" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" type="button">
+              <span class="step__marker" aria-hidden="true">02</span>
+              <span class="step__title">Strategize</span>
+              <span class="step__text">Develop the creative and marketing strategy.</span>
+            </button>
+            <button class="step" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" type="button">
+              <span class="step__marker" aria-hidden="true">03</span>
+              <span class="step__title">Create</span>
+              <span class="step__text">Design, develop, and refine the experience.</span>
+            </button>
+            <button class="step" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1" type="button">
+              <span class="step__marker" aria-hidden="true">04</span>
+              <span class="step__title">Launch &amp; Optimize</span>
+              <span class="step__text">Launch the project and improve it using real performance data.</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="step-panels">
+          <div class="step-panel is-active" role="tabpanel" id="panel-1" aria-labelledby="tab-1" tabindex="0">
+            <h3>What happens in Discover</h3>
+            <ul><li>Stakeholder interview and goal setting</li><li>Audience and competitor review</li><li>Audit of your current site, ads and analytics</li></ul>
+          </div>
+          <div class="step-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" tabindex="0" hidden>
+            <h3>What happens in Strategize</h3>
+            <ul><li>Positioning and messaging direction</li><li>Channel and budget plan with clear targets</li><li>Site structure and content priorities</li></ul>
+          </div>
+          <div class="step-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" tabindex="0" hidden>
+            <h3>What happens in Create</h3>
+            <ul><li>Visual design and review rounds</li><li>WordPress build with performance and accessibility checks</li><li>Campaign creative and tracking setup</li></ul>
+          </div>
+          <div class="step-panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" tabindex="0" hidden>
+            <h3>What happens in Launch &amp; Optimize</h3>
+            <ul><li>Staged launch with a checklist</li><li>Monthly reporting on the numbers you chose</li><li>Testing and improvements based on real data</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="testimonials-title" data-split>KIND WORDS, WHEN THEY'RE REAL</h2>
+          <p class="section__intro" data-reveal><strong>Demo content.</strong> These quotes are placeholders. Replace them with genuine, permissioned testimonials before launch.</p>
+        </header>
+
+        <div class="carousel" id="carousel" role="group" aria-roledescription="carousel" aria-label="Testimonials">
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carousel-track">
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                <span class="slide__badge">Demo content</span>
+                <blockquote>"Placeholder testimonial. Describe the problem the client had, what changed after working with you, and one specific outcome they noticed."</blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">PN</span><span><strong>Placeholder Name</strong><br>Role, Company</span></figcaption>
+              </figure>
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3" inert>
+                <span class="slide__badge">Demo content</span>
+                <blockquote>"Placeholder testimonial. Mention what working together felt like: communication, speed, and how the team handled changes."</blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">PN</span><span><strong>Placeholder Name</strong><br>Role, Company</span></figcaption>
+              </figure>
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3" inert>
+                <span class="slide__badge">Demo content</span>
+                <blockquote>"Placeholder testimonial. Share why they would recommend you, in their own words, and keep it short and specific."</blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">PN</span><span><strong>Placeholder Name</strong><br>Role, Company</span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <div class="carousel__dots" id="carousel-dots"></div>
+            <div class="carousel__buttons">
+              <button class="round-btn" type="button" id="carousel-prev" aria-label="Previous testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+              <button class="round-btn" type="button" id="carousel-next" aria-label="Next testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </div>
+          <p class="sr-only" id="carousel-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHTS ============ -->
+    <section class="section insights" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="insights-title" data-split>INSIGHTS</h2>
+          <p class="section__intro" data-reveal>Sample article cards. Dates and reading times are placeholders until real posts are published.</p>
+        </header>
+
+        <div class="insights__grid" data-stagger>
+          <article class="post">
+            <span class="post__tag">Digital Marketing Trends</span>
+            <h3 class="post__title"><button class="post__btn" type="button" data-open-article="trends">Where digital marketing is heading next: five shifts to plan for</button></h3>
+            <p class="post__text">Search is changing, paid media is getting pricier, and first-party data matters more. Here is what to adjust.</p>
+            <p class="post__meta"><span>6 min read</span><span>Publish date to be set</span></p>
+          </article>
+          <article class="post">
+            <span class="post__tag">WordPress Performance</span>
+            <h3 class="post__title"><button class="post__btn" type="button" data-open-article="wordpress">Why your WordPress site feels slow, and what to fix first</button></h3>
+            <p class="post__text">Heavy themes, oversized images and plugin clutter are the usual suspects. A practical order of attack.</p>
+            <p class="post__meta"><span>8 min read</span><span>Publish date to be set</span></p>
+          </article>
+          <article class="post">
+            <span class="post__tag">SEO Strategy</span>
+            <h3 class="post__title"><button class="post__btn" type="button" data-open-article="seo">SEO strategy for brands that are still growing</button></h3>
+            <p class="post__text">You cannot outspend bigger competitors, but you can out-focus them. How to choose battles worth winning.</p>
+            <p class="post__meta"><span>7 min read</span><span>Publish date to be set</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__copy">
+          <h2 class="section__title" id="contact-title" data-split>HAVE A BIG IDEA? LET'S MAKE IT HAPPEN.</h2>
+          <p data-reveal>Tell us about your project and we will reply with next steps. Fields marked with an asterisk are required.</p>
+          <p class="contact__demo" data-reveal><strong>Demo form.</strong> This site has no backend, so nothing is sent. To receive real inquiries, connect the form to a service such as Formspree, Getform or Netlify Forms, or to your own server endpoint (see the notes in script.js).</p>
+        </div>
+
+        <div class="contact__panel">
+          <form class="form" id="inquiry-form" novalidate>
+            <div class="form__status" id="form-status" role="alert" tabindex="-1"></div>
+
+            <div class="field">
+              <label for="f-name">Name <span aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error">
+              <p class="field__error" id="f-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Business email <span aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-error">
+              <p class="field__error" id="f-email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-company">Company name <span aria-hidden="true">*</span></label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" required aria-describedby="f-company-error">
+              <p class="field__error" id="f-company-error" hidden></p>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-service">Service <span aria-hidden="true">*</span></label>
+                <select id="f-service" name="service" required aria-describedby="f-service-error">
+                  <option value="">Choose a service</option>
+                  <option value="seo">SEO &amp; Organic Growth</option>
+                  <option value="ads">Performance Marketing</option>
+                  <option value="social">Social Media Strategy</option>
+                  <option value="brand">Brand Identity &amp; Creative</option>
+                  <option value="wordpress">WordPress Web Development</option>
+                  <option value="multiple">More than one service</option>
+                </select>
+                <p class="field__error" id="f-service-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-budget">Project budget <span aria-hidden="true">*</span></label>
+                <select id="f-budget" name="budget" required aria-describedby="f-budget-error">
+                  <option value="">Choose a range</option>
+                  <option>Under $2,000</option>
+                  <option>$2,000 to $5,000</option>
+                  <option>$5,000 to $10,000</option>
+                  <option>$10,000 or more</option>
+                  <option>Not sure yet</option>
+                </select>
+                <p class="field__error" id="f-budget-error" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-details">Project details <span aria-hidden="true">*</span></label>
+              <textarea id="f-details" name="details" rows="5" required aria-describedby="f-details-hint f-details-error"></textarea>
+              <p class="field__hint" id="f-details-hint">Goals, timeline, links to your current site. At least 20 characters.</p>
+              <p class="field__error" id="f-details-error" hidden></p>
+            </div>
+            <button class="btn btn--primary btn--block magnetic" type="submit">Submit Project Inquiry</button>
+          </form>
+
+          <div class="success" id="form-success" tabindex="-1" hidden>
+            <span class="success__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <h3>Your inquiry passed validation</h3>
+            <p><strong>Demo only: nothing was sent.</strong> No submission service is connected to this site, so no one received your details.</p>
+            <button class="btn btn--ghost btn--sm" type="button" id="form-edit">Edit inquiry</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo logo--lg" href="#home" aria-label="NEXORA DIGITAL, back to top">NEXORA DIGITAL<sup>®</sup></a>
+          <p>A fictional demo agency for SEO, paid media, social, branding and WordPress development.</p>
+          <p><a class="footer__mail" href="mailto:hello@nexora-digital.example">hello@nexora-digital.example</a></p>
+        </div>
+        <nav class="footer__col" aria-label="Footer navigation">
+          <h2 class="footer__heading">Navigate</h2>
+          <ul>
+            <li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li><li><a href="#insights">Insights</a></li><li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Services">
+          <h2 class="footer__heading">Services</h2>
+          <ul>
+            <li><a href="#services">SEO &amp; Organic Growth</a></li><li><a href="#services">Performance Marketing</a></li><li><a href="#services">Social Media Strategy</a></li>
+            <li><a href="#services">Brand Identity</a></li><li><a href="#services">WordPress Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow</h2>
+          <ul>
+            <li><a href="#" data-placeholder="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" data-placeholder="Instagram">Instagram</a></li>
+            <li><a href="#" data-placeholder="X">X</a></li>
+            <li><a href="#" data-placeholder="Behance">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> NEXORA DIGITAL. Demo website; all projects, figures and testimonials are fictional placeholders.</p>
+        <button class="footer__top-btn" type="button" data-to-top>Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" data-to-top aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+  <!-- Shared dialog for project details, article previews and placeholder links -->
+  <dialog class="dialog" id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog__body">
+      <button class="dialog__close" type="button" id="dialog-close" aria-label="Close dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <p class="dialog__kicker" id="dialog-kicker"></p>
+      <h2 class="dialog__title" id="dialog-title"></h2>
+      <p id="dialog-text"></p>
+      <ul class="dialog__list" id="dialog-list"></ul>
+      <p class="dialog__note" id="dialog-note"></p>
+      <a class="btn btn--primary btn--sm" href="#contact" id="dialog-cta">Start a similar project</a>
+    </div>
+  </dialog>
+
+  <!--
+    Libraries (CDN, no build step):
+    - GSAP + ScrollTrigger: scroll reveals, masks, parallax, intro timeline
+    - Three.js r128: hero 3D orb (falls back to a CSS orb if unavailable)
+    The site still works if these fail to load: content stays visible and only motion is lost.
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
